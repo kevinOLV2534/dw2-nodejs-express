@@ -14,7 +14,7 @@ const user = "Kevin";
 function showUserMessage(user) {
   // ESSA FUNÇÃO RECEBE UM PARÂMETRO
   document.write(`<h3>O que deseja fazer hoje, ${user}?</h3>`);
-}.
+}
 
 showUserMessage(user); // Envio de argumento
 

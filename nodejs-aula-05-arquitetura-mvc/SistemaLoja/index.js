@@ -6,23 +6,6 @@ import express from "express";
 import ClienteController from "./controllers/ClienteController.js";
 import ProdutoController from "./controllers/ProdutoController.js";
 import PedidoController from "./controllers/PedidoController.js";
-// Importando o arquivo de conexão com o banco
-import connection from "./config/sequelize-config.js";
-
-// Realizar a conexão com o banco de dados
-connection.authenticate().then(()=>{
-  console.log("Conexão com o banco de dados realizada com sucesso!");
-}).catch(error => {
-  console.log(`Ocorreu um erro ao se conectar ao banco. ${error}`);
-});
-
-// Criando o banco de dados (somente se ainda não existir)
-connection.query("create database if not exists SistemaLoja")
-.then(()=>{
-  console.log("O banco de dados foi criado");
-}).catch((error)=>{
-  console.log(`Ocorreu um erro ao criar o banco de dados. Erro: ${error}`);
-});
 
 // Iniciando o Express
 const app = express();

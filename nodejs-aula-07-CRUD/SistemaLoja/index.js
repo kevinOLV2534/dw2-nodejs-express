@@ -30,6 +30,8 @@ const app = express();
 app.set("view engine", "ejs");
 // Define o uso da pasta "public" para uso de arquivos estáticos
 app.use(express.static("public"));
+// Configurando o express para aceitar dados vindo de formulários
+app.use(express.urlencoded({extended: false}))
 
 // Ativando o uso das ROTAS
 app.use("/", ClienteController);

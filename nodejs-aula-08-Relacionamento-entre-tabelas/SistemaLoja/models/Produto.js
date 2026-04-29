@@ -16,5 +16,5 @@ const Produto = connection.define('Produtos',{
     }
 })
 
-Produto.sync({force: false});
+// Produto.sync({force: false});
 export default Produto;
